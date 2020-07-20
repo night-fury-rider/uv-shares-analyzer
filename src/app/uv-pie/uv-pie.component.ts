@@ -46,19 +46,20 @@ export class UvPieComponent implements OnInit, AfterViewInit {
       series.dataFields.category = 'name';
       series.slices.template.propertyFields.fill = 'color';
 
-      series.slices.template.events.on('hit', ((event) => {
-        const tmpSeries = event.target.dataItem.component;
-        tmpSeries.slices.each((item) => {
-          if (item.isActive && item !== event.target) {
+      series.slices.template.events.on('hit', ((ev) => {
+        series.slices.each(((item) => {
+          if (item.isActive && item !== ev.target) {
             item.isActive = false;
           }
-        });
+        }));
       }));
 
       if (this.uvUtilService.isMobileDevice()) {
         chart.legend = new am4charts.Legend();
         series.labels.template.disabled = true;
       }
+      series.labels.template.wrap = true;
+      series.labels.template.width = 150;
     });
   }
 
