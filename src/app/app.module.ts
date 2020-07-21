@@ -5,15 +5,13 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UvPieComponent } from './uv-pie/uv-pie.component';
-import { UvTableComponent } from './uv-table/uv-table.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    UvPieComponent,
-    UvTableComponent
+    UvPieComponent
   ],
   imports: [
     BrowserModule,
