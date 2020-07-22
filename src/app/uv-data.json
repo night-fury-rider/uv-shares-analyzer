@@ -1,4 +1,7 @@
 {
+  "general": {
+    "gitIcon": "/assets/github-social-media_765246.svg"
+  },
   "sectors": [
     {
       "id": 0,
