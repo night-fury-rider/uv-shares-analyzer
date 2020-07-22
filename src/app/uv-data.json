@@ -1,0 +1,86 @@
+{
+  "sectors": [
+    {
+      "id": 0,
+      "name": "Information Technology",
+      "value": 0,
+      "shares": [
+        {
+          "name": "TCS",
+          "price": 180,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Finance",
+      "value": 0,
+      "color": "#1e487c",
+      "shares": [
+        {
+          "name": "State Bank of India",
+          "price": 200,
+          "quantity": 1
+        },
+        {
+          "name": "Edelweiss",
+          "price": 100,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Automobile",
+      "value": 0,
+      "color": "yellow",
+      "shares": [
+        {
+          "name": "Ashok Leyland",
+          "price": 50,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "name": "Pharma",
+      "value": 0,
+      "color": "green",
+      "shares": []
+    },
+    {
+      "id": 4,
+      "name": "Petroleum",
+      "value": 0,
+      "color": "gray",
+      "shares": [
+        {
+          "name": "Hindustan Petroleum",
+          "price": 200,
+          "quantity": 1
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "name": "Consumer Goods",
+      "value": 0,
+      "shares": [
+      ]
+    },
+    {
+      "id": 6,
+      "name": "Sugar",
+      "value": 0,
+      "shares": [
+        {
+          "name": "Ugar Sugar",
+          "price": 15,
+          "quantity": 10
+        }
+      ]
+    }
+  ]
+}

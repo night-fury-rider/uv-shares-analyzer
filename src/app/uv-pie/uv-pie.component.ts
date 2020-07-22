@@ -7,10 +7,9 @@ import * as am4charts from '@amcharts/amcharts4/charts';
 import am4themes_animated from '@amcharts/amcharts4/themes/animated';
 import am4themes_material from '@amcharts/amcharts4/themes/material';
 
-import * as pieData from './uv-pie.json';
+import * as appData from './../uv-data.json';
 
-am4core.useTheme(am4themes_material);
-am4core.useTheme(am4themes_animated);
+import { UvDashboardService } from './../dashboard/uv-dashboard.service';
 
 interface Sector {
   name: string;
@@ -26,9 +25,12 @@ interface Sector {
 export class UvPieComponent implements OnInit, AfterViewInit {
 
   private chart: am4charts.PieChart3D;
-  constructor(private zone: NgZone, private uvUtilService: UvUtilService) { }
+  constructor(private zone: NgZone, private uvUtilService: UvUtilService,
+              private uvDashboardService: UvDashboardService) { }
 
   ngOnInit(): void {
+    am4core.useTheme(am4themes_material);
+    am4core.useTheme(am4themes_animated);
   }
 
   ngAfterViewInit(): void {
@@ -38,15 +40,18 @@ export class UvPieComponent implements OnInit, AfterViewInit {
 
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-      chart.data = this.getProcessedData(pieData.sectors);
+      chart.data = this.getProcessedData(appData.sectors);
 
       const series = chart.series.push(new am4charts.PieSeries3D());
 
       series.dataFields.value = 'value';
       series.dataFields.category = 'name';
       series.slices.template.propertyFields.fill = 'color';
+      series.slices.template.propertyFields.isActive = 'isActive';
+      series.slices.template.propertyFields.id = 'id';
 
       series.slices.template.events.on('hit', ((ev) => {
+        this.uvDashboardService.updateSector(Number(ev.target.id));
         series.slices.each(((item) => {
           if (item.isActive && item !== ev.target) {
             item.isActive = false;

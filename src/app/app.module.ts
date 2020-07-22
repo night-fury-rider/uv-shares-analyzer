@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { UvPieComponent } from './uv-pie/uv-pie.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { UvBarChartComponent } from './uv-bar-chart/uv-bar-chart.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DashboardComponent,
-    UvPieComponent
+    UvPieComponent,
+    UvBarChartComponent
   ],
   imports: [
     BrowserModule,
