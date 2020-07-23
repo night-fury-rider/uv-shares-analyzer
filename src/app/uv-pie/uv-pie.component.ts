@@ -77,9 +77,13 @@ export class UvPieComponent implements OnInit, AfterViewInit {
   }
 
   getProcessedData(sectors): any[] {
+    const processedSectors = [];
     for (const sector of sectors) {
       sector.value = this.getSectorTotal(sector);
+      if (sector.value > 0) {
+        processedSectors.push(sector);
+      }
     }
-    return sectors;
+    return processedSectors;
   }
 }

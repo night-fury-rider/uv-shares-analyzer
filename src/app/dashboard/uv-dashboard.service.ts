@@ -8,7 +8,7 @@ export class UvDashboardService {
 
   constructor() { }
 
-  private sectorSubject = new BehaviorSubject<number>(0);   // Value in brackets is default value of subject
+  private sectorSubject = new BehaviorSubject<number>(1);   // Value in brackets is default value of subject
 
   sectorSubscriber$ = this.sectorSubject.asObservable();
 

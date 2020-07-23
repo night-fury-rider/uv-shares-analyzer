@@ -1,6 +1,6 @@
 {
   "general": {
-    "gitIcon": "/assets/github-social-media_765246.svg"
+    "gitIcon": "/assets/github.png"
   },
   "sectors": [
     {
@@ -10,8 +10,18 @@
       "shares": [
         {
           "name": "TCS",
-          "price": 180,
+          "price": 1800,
           "quantity": 1
+        },
+        {
+          "name": "Infosys",
+          "price": 800,
+          "quantity": 10
+        },
+        {
+          "name": "HCL",
+          "price": 500,
+          "quantity": 5
         }
       ]
     },
@@ -24,12 +34,47 @@
         {
           "name": "State Bank of India",
           "price": 200,
-          "quantity": 1
+          "quantity": 20
         },
         {
           "name": "Edelweiss",
           "price": 100,
+          "quantity": 35
+        },
+        {
+          "name": "ICICI Bank",
+          "price": 400,
+          "quantity": 6
+        },
+        {
+          "name": "Kotak Mahindra Bank",
+          "price": 1500,
+          "quantity": 2
+        },
+        {
+          "name": "Bajaj Finance",
+          "price": 2500,
           "quantity": 1
+        },
+        {
+          "name": "Bajaj Finserv",
+          "price": 4500,
+          "quantity": 1
+        },
+        {
+          "name": "IndusInd Bank",
+          "price": 500,
+          "quantity": 4
+        },
+        {
+          "name": "Bandhan Bank",
+          "price": 300,
+          "quantity": 5
+        },
+        {
+          "name": "Axis Bank",
+          "price": 450,
+          "quantity": 6
         }
       ]
     },
@@ -42,7 +87,17 @@
         {
           "name": "Ashok Leyland",
           "price": 50,
-          "quantity": 1
+          "quantity": 100
+        },
+        {
+          "name": "Mahindra & Mahindra",
+          "price": 600,
+          "quantity": 5
+        },
+        {
+          "name": "Hero MotoCorp",
+          "price": 2500,
+          "quantity": 3
         }
       ]
     },
@@ -62,7 +117,7 @@
         {
           "name": "Hindustan Petroleum",
           "price": 200,
-          "quantity": 1
+          "quantity": 20
         }
       ]
     },
@@ -81,7 +136,7 @@
         {
           "name": "Ugar Sugar",
           "price": 15,
-          "quantity": 10
+          "quantity": 300
         }
       ]
     }
