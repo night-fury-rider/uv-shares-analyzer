@@ -41,20 +41,19 @@ p {
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo {
+.toolbar #git-logo {
   height: 40px;
   margin: 0 16px;
 }
 
-.toolbar #twitter-logo:hover {
+.toolbar #git-logo:hover {
   opacity: 0.8;
 }
 
 .content {
   display: flex;
-  margin: 82px auto 32px;
+  margin-top: 82px;
   padding: 0 16px;
-  max-width: 960px;
   flex-direction: column;
 }
 
