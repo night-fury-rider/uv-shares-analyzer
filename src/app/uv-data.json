@@ -2,12 +2,12 @@
   "general": {
     "gitIcon": "/assets/github.png"
   },
-  "sectors": [
+  "categories": [
     {
       "id": 0,
       "name": "Information Technology",
       "value": 0,
-      "shares": [
+      "items": [
         {
           "name": "TCS",
           "price": 1800,
@@ -30,7 +30,7 @@
       "name": "Finance",
       "value": 0,
       "color": "#1e487c",
-      "shares": [
+      "items": [
         {
           "name": "State Bank of India",
           "price": 200,
@@ -83,7 +83,7 @@
       "name": "Automobile",
       "value": 0,
       "color": "yellow",
-      "shares": [
+      "items": [
         {
           "name": "Ashok Leyland",
           "price": 50,
@@ -106,14 +106,14 @@
       "name": "Pharma",
       "value": 0,
       "color": "green",
-      "shares": []
+      "items": []
     },
     {
       "id": 4,
       "name": "Petroleum",
       "value": 0,
       "color": "gray",
-      "shares": [
+      "items": [
         {
           "name": "Hindustan Petroleum",
           "price": 200,
@@ -125,14 +125,14 @@
       "id": 5,
       "name": "Consumer Goods",
       "value": 0,
-      "shares": [
+      "items": [
       ]
     },
     {
       "id": 6,
       "name": "Sugar",
       "value": 0,
-      "shares": [
+      "items": [
         {
           "name": "Ugar Sugar",
           "price": 15,

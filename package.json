@@ -24,6 +24,7 @@
     "@angular/platform-browser-dynamic": "~10.0.2",
     "@angular/router": "~10.0.2",
     "@ng-bootstrap/ng-bootstrap": "^7.0.0",
+    "@uv-tech/util": "0.0.2",
     "bootstrap": "^4.5.0",
     "rxjs": "~6.5.5",
     "tslib": "^2.0.0",

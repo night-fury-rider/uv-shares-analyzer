@@ -1,6 +1,6 @@
 import { Component, OnInit, AfterViewInit, NgZone } from '@angular/core';
 
-import { UvUtilService } from './../uv-util.service';
+import uvDevice from '@uv-tech/util/modules/uv-device';
 
 import * as am4core from '@amcharts/amcharts4/core';
 import * as am4charts from '@amcharts/amcharts4/charts';
@@ -9,13 +9,8 @@ import am4themes_material from '@amcharts/amcharts4/themes/material';
 
 import * as appData from './../uv-data.json';
 
+import { Category } from './../category';
 import { UvDashboardService } from './../dashboard/uv-dashboard.service';
-
-interface Sector {
-  name: string;
-  value: number;
-  shares: any[];
-}
 
 @Component({
   selector: 'app-uv-pie',
@@ -25,7 +20,7 @@ interface Sector {
 export class UvPieComponent implements OnInit, AfterViewInit {
 
   private chart: am4charts.PieChart3D;
-  constructor(private zone: NgZone, private uvUtilService: UvUtilService,
+  constructor(private zone: NgZone,
               private uvDashboardService: UvDashboardService) { }
 
   ngOnInit(): void {
@@ -40,7 +35,7 @@ export class UvPieComponent implements OnInit, AfterViewInit {
 
       chart.hiddenState.properties.opacity = 0; // this creates initial fade-in
 
-      chart.data = this.getProcessedData(appData.sectors);
+      chart.data = this.getProcessedData(appData.categories);
 
       const series = chart.series.push(new am4charts.PieSeries3D());
 
@@ -59,7 +54,7 @@ export class UvPieComponent implements OnInit, AfterViewInit {
         }));
       }));
 
-      if (this.uvUtilService.isMobileDevice()) {
+      if (uvDevice.isMobileDevice()) {
         chart.legend = new am4charts.Legend();
         series.labels.template.disabled = true;
       }
@@ -68,10 +63,10 @@ export class UvPieComponent implements OnInit, AfterViewInit {
     });
   }
 
-  getSectorTotal(sector: Sector): number {
+  getSectorTotal(category: Category): number {
     let total = 0;
-    for (const share of sector.shares) {
-      total += share.price * share.quantity;
+    for (const item of category.items) {
+      total += item.price * item.quantity;
     }
     return total;
   }

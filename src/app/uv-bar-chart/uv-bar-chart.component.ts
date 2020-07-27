@@ -26,11 +26,11 @@ export class UvBarChartComponent implements OnInit {
     this.initComponent();
   }
 
-  getProcessedData(shares): any[] {
-    for (const share of shares) {
-      share.value = share.price * share.quantity;
+  getProcessedData(entries): any[] {
+    for (const entry of entries) {
+      entry.value = entry.price * entry.quantity;
     }
-    return shares;
+    return entries;
   }
 
   initComponent(): void {
@@ -72,8 +72,8 @@ export class UvBarChartComponent implements OnInit {
     series.columns.template.maxHeight =  50;
 
     // Display bar chart based on sector selected.
-    this.sectorSubscription = this.uvDashboardService.sectorSubscriber$.subscribe(sectorId => {
-      chart.data = this.getProcessedData(appData.sectors[sectorId].shares);
+    this.sectorSubscription = this.uvDashboardService.sectorSubscriber$.subscribe(categoryId => {
+      chart.data = this.getProcessedData(appData.categories[categoryId].items);
     });
   }
 }
